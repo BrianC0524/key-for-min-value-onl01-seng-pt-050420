@@ -3,11 +3,11 @@
 
 def key_for_min_value(name_hash)
   
-  cur_value = 5000
+  cur_value = nil
   cur_key = nil
   
   name_hash.each do |key, value|
-    if value < cur_value
+    if cur_value == nil || value < cur_value
      cur_value = value
      cur_key = key
     end
